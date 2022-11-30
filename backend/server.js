@@ -10,7 +10,9 @@ const app = express()
 /////////////////////middleware
 app.use(express.json())
 app.use(express.urlencoded({extended:false}))
-app.use(cors());
+app.use(cors({
+    origin: ["http://localhost:3000", "http://sohail-nasir-taskapp.onrender.com"]
+}));
   
 
 ///////////////////user Routs
